@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Stacking</title>
+
+    <style>
+            #my{
+                position: relative;
+                top:0px;
+                left:0px;
+            }
+
+            #mountain{
+                position: inherit;
+                top: 26px;
+                left: -100px;
+            }
+    </style>
+    </head>
+
+    <body>
+          <h3>Image Stacking </h3>
+          <img src="images/IMG_9452.jpg" id="my" height="500px" />
+          <img src="images/mountain.jpg" id="mountain" height="500" />
+
+    <script>
+        var my = document.getElementById('my');
+    var mountain = document.getElementById('mountain');
+
+    my.addEventListener('click', function (ev) {
+      my.style.zIndex = 1;
+      mountain.style.zIndex = 0;
+    });
+    mountain.addEventListener('click', function (ev) {
+      mountain.style.zIndex = 1;
+      my.style.zIndex = 0;
+    });
+
+    </script>
+    </body>
+    
+</html>

@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Visibility</title>
+    </head>
+    <body>
+        <img src="images/star.jpg" id="image" height="500px" , width="800px"/>
+        <button id="btn" onclick="toggle()">HIDE</button>
+
+    <script>
+        function toggle(){
+            var image=document.getElementById('image');
+            var btn  =document.getElementById('btn').innerHTML;
+
+                if(btn=="SHOW"){
+                    image.style.display="block";
+                    document.getElementById('btn').innerHTML="HIDE";
+                }
+                else{
+                    image.style.display="none";
+                    document.getElementById('btn').innerHTML="SHOW";
+                }
+            }
+                
+
+        
+    </script>
+
+    </body>
+</html>
